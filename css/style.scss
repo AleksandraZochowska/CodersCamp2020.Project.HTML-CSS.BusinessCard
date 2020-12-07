@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+:root {
+    --color-dark-main: #721D36;
+    --color-dark-second: #183A37;
+    --color-light-main: #F1F9F8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-light-main);
+    line-height: 1.6;
+    background-color: var(--color-dark-main);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light-main);
+}
+
+img {
+    width: 100%;
+}
+
+/*  Home site */
+
+.welcome-page {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/main_photo.jpg") center/cover;
+    position: relative;
+    
+
+    .navbar {
+        background-color: black;
+        opacity: 0.7;
+
+        .navbar-items {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            .logo {
+                font-weight: 800;
+                font-size: 2rem;
+                text-transform: uppercase;
+                
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            
+            ul {
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                
+                li {
+                    padding: 1.2rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    
+                    a {
+                        &:hover {
+                            opacity: 0.9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .socials {
+        padding: 20px;
+        position: absolute;
+        top: 80%;
+    }
+
+    .welcome-text {
+        width: 100%;
+        margin: 0 auto;
+        background-color:rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 45%;
+
+        h1, p {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        p {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+    }
+}
+
