@@ -20,6 +20,8 @@ body {
   background-color: var(--color-main-light);
 }
 
+/*_______________________________________________*/
+/*  Re-usable styles  */
 ul {
   list-style-type: none;
 }
@@ -41,12 +43,27 @@ a.more-info:hover {
 
 h2 {
   font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
-/*_______________________________________________*/
-/*  Re-usable styles  */
+h3 {
+  font-size: 1.8rem;
+}
+
+.btn {
+  padding: 15px 50px;
+  margin: 3rem;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 2;
+  border: 0;
+}
+
 .page {
   height: 100vh;
+  padding: 1rem 0;
 }
 
 .page:nth-child(even) {
@@ -79,6 +96,59 @@ h2 {
   display: flex;
   justify-content: center;
   z-index: 100;
+}
+
+/*_______________________________________________*/
+/*  Tables  */
+table {
+  width: 100%;
+  background: var(--color-main-light);
+  color: var(--color-dark-gray);
+  border-collapse: collapse;
+  position: relative;
+}
+
+table thead {
+  border-bottom: 2px solid var(--color-dark-gray);
+}
+
+table thead th {
+  padding: 10px;
+}
+
+table tbody tr td {
+  text-align: center;
+  padding: 10px;
+  border: 1px dotted var(--color-light-gray);
+}
+
+table tbody tr td:first-child {
+  border-left: none;
+}
+
+table tbody tr td:last-child {
+  border-right: none;
+}
+
+table tbody tr td.workshop a {
+  padding: 10px;
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+
+table tbody tr td.workshop a:hover {
+  border-radius: 5%;
+  background: rgba(234, 77, 231, 0.158);
+}
+
+table tbody tr td.time {
+  text-align: left;
+  opacity: 0.6;
 }
 
 /*_______________________________________________*/
@@ -223,10 +293,6 @@ h2 {
   padding-bottom: 1rem;
 }
 
-#about-page .about-text h2 {
-  padding-bottom: 2rem;
-}
-
 #about-page img {
   object-fit: cover;
   padding: 3rem 0;
@@ -243,4 +309,57 @@ h2 {
 #about-page img#photo2 {
   width: 35%;
   height: 100%;
+}
+
+/*_______________________________________________*/
+/*  Motto page  */
+#motto-page {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: fixed url("../img/main_photo.jpg") center/cover;
+  z-index: -20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#motto-page::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: black;
+  opacity: 0.7;
+}
+
+#motto-page h3 {
+  text-transform: uppercase;
+}
+
+#motto-page .btn {
+  color: var(--color-dark-gray);
+  background: var(--color-main-light);
+}
+
+#motto-page .btn a {
+  color: var(--color-dark-gray);
+}
+
+#motto-page .btn a:hover {
+  background: var(--color-light-violet);
+}
+
+/*_______________________________________________*/
+/*  Schedule page  */
+#schedule-page {
+  padding: 6rem 0;
+  height: auto;
+}
+
+#pricing-page {
+  background: black;
 }
