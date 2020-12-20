@@ -19,8 +19,6 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--color-dark-gray);
     background-color: var(--color-main-light);
-    // border: 1px solid red;
-    // overflow: hidden;
 }
 
 ul {
@@ -30,6 +28,22 @@ ul {
 a {
     text-decoration: none;
     color: var(--color-dark-gray);
+
+    &.more-info {
+        text-transform: uppercase;
+        // display: block;
+        // width:auto;
+        
+        &:hover {
+            content : "";
+            width: 50%;
+            border-bottom: 2px solid var(--color-dark-gray);
+        }
+    }
+}
+
+h2 {
+     font-size: 2rem;   
 }
 
 /*_______________________________________________*/
@@ -38,6 +52,7 @@ a {
 .page {
     // width: 60%;
     height: 100vh;
+    // border: 1px solid blue;
 }
 
 .page:nth-child(even) {
@@ -51,16 +66,21 @@ a {
 .page:nth-child(odd) {
     color: var(--color-dark-gray);
     a {
-        color: var(--color-main-light);
+        color: var(--color-dark-gray);
     }
 }
 
 .page-contents {
-    position: relative; 
-    z-index: 0;
+    // position: relative; 
+    // z-index: 0;
     max-width: 56%;
     margin: 0 auto;  
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: 1px solid yellow;
+    flex-wrap: wrap;
 }
 
 .navbar {
@@ -137,7 +157,7 @@ a {
 }
 
 /*_______________________________________________*/
-/*  Home site  */
+/*  Home page  */
 
 #welcome-page {
     width: 100%;
@@ -178,10 +198,6 @@ a {
     }
 
     .welcome-text {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         h1 {
             font-size: 3.3em;
@@ -191,7 +207,7 @@ a {
 
         p {
             font-weight: 500;
-            font-size: 2em;
+            font-size: 2rem;
         }
     }
     
@@ -208,7 +224,7 @@ a {
         .socials {
             padding: 1vh 0;
             display: flex;
-            margin-left: 0.9rem;
+            padding-left: 0.9rem;
             // border: 2px solid yellow;
             flex-direction: column;
             align-items: center;
@@ -232,5 +248,51 @@ a {
     }
     
 
+}
+
+/*_______________________________________________*/
+/*  About Us page  */
+
+#about-page {
+    // border: 1px solid blue;
+    align-content: space-between;
+    
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        flex: 0.5 0.5 50%;
+        padding: 2rem 0;
+        
+        p {
+            padding-bottom: 1rem;
+        }
+        
+        h2 {
+            padding-bottom: 2rem;
+        }
+
+
+    }
+    
+    img {
+        object-fit: cover;
+        padding-top: 3rem;
+        
+        &#photo1 {
+            flex: 0.5 0.5 30%;
+            width: 60%;
+            height: 30%;
+            object-position: 50% 30%;
+            order: -1;
+        }
+        
+        &#photo2 {
+            width: 35%;
+            height: 100%;
+        }
+    }
 }
 
