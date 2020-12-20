@@ -23,10 +23,9 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#about-page">About</a></li>
                         <li><a href="#schedule-page">Schedule</a></li>
-                        <li><a href="#pricing-page">Sign Up</a></li>
+                        <li><a href="#signup-page">Sign Up</a></li>
                         <li><a href="#testimonials-page">Customers' Opinions</a></li>
                         <li><a href="#contact-page">Contact</a></li>
-                        <li><a href="#portfolio-page">Gallery</a></li>
                     </ul>
                 </nav>
             </div>
@@ -56,10 +55,12 @@
             <img src="./img/style02.jpg" alt="photo of a dancer" id="photo2">
         </section>
         <section id="motto-page" class="page">
-            <h3>Dance who you are</h3>
-            <a href="#schedule-page">
-                <button class="btn">Discover</button>
-            </a>
+            <div class="page-contents">
+                <h3>Dance who you are</h3>
+                <a href="#schedule-page">
+                    <button type="button" class="btn">Discover</button>
+                </a>
+            </div>
         </section>
         <section id="schedule-page" class="page page-contents">
             <h2>Workshop schedule</h2>
@@ -120,21 +121,28 @@
                 </tbody>
             </table>
         </section>
-        <section id="pricing-page" class="page">
-        
-        </section>
-        <section id="testimonials-page" class="page">
-        
+        <section id="signup-page" class="page page-contents">
+            <h2>Join Us</h2>
+            <p>Choose the best option to start your journey with our school!</p>
+            <form action="dane.txt" method="post">
+                <input aria-label="Name" id="i_name" type="text" minlength="2" maxlength="30" placeholder="Name" required>
+                <input aria-label="Surname" type="text" minlength="2" maxlength="30" placeholder="Surname" required>
+                <select aria-label="Choose pass type" required>
+                    <option value="" disabled selected hidden>Choose Pass Type</option>
+                    <option value="one_class">1 Class: Entrance to 1 class (1 or 2 hours), style of choice - 50 PLN</option>
+                    <option value="one_day">1 Day: Entrance to all classes during chosen day - 110 PLN</option>
+                    <option value="one_week">1 Week: Entrance to all classes during chosen week - 400 PLN</option>
+                    <option value="ten_classes">10 Classes: Entrance to 10 classes of choice (1 or 2 hours), style of choice - 420 PLN</option>
+                </select>
+                <button type="submit" class="btn">Sign Up for Classes</button>
+            </form>
         </section>
         <section id="contact-page" class="page">
         
         </section>
-        <section id="portfolio-page" class="page">
-        
-        </section>
-        <section id="footer-page" class="page">
-        
-        </section>
+        <footer class="page">
+        <p>Strona wykonana przez <a href="https://github.com/AleksandraZochowska">Aleksandrę Żochowską</a> w trakcie kursu <a href="https://github.com/CodersCamp2020">CodersCamp 2020</a> na bazie projektu <a href="https://www.behance.net/chubukina1997">Julii Havryliuk</a>.</p>
+        </footer>
     </div>
 </body>
 </html>

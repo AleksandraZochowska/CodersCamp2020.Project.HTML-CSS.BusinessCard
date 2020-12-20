@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 :root {
   --color-main-light: #ffffff;
+  --color-second-light: #e6dcdc;
   --color-light-gray: #545454;
   --color-dark-gray: #333333;
   --color-light-violet: #ea4fe7;
@@ -41,18 +42,27 @@ a.more-info:hover {
   border-bottom: 2px solid var(--color-dark-gray);
 }
 
+h1 {
+  font-size: 3.3em;
+  line-height: 0.9;
+  font-weight: 700;
+}
+
 h2 {
   font-size: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 h3 {
   font-size: 1.8rem;
 }
 
+h4 {
+  font-size: 1.4rem;
+}
+
 .btn {
   padding: 15px 50px;
-  margin: 3rem;
   font-family: inherit;
   font-size: 100%;
   font-weight: 500;
@@ -62,8 +72,7 @@ h3 {
 }
 
 .page {
-  height: 100vh;
-  padding: 1rem 0;
+  min-height: auto;
 }
 
 .page:nth-child(even) {
@@ -86,6 +95,7 @@ h3 {
   max-width: 56%;
   margin: 0 auto;
   height: 100vh;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,11 +119,16 @@ table {
 }
 
 table thead {
+  width: 100%;
   border-bottom: 2px solid var(--color-dark-gray);
 }
 
 table thead th {
   padding: 10px;
+}
+
+table thead th:first-child {
+  width: 10%;
 }
 
 table tbody tr td {
@@ -147,7 +162,7 @@ table tbody tr td.workshop a:hover {
 }
 
 table tbody tr td.time {
-  text-align: left;
+  text-align: center;
   opacity: 0.6;
 }
 
@@ -228,12 +243,6 @@ table tbody tr td.time {
   opacity: 0.4;
 }
 
-#welcome-page .welcome-text h1 {
-  font-size: 3.3em;
-  line-height: 0.9;
-  font-weight: 700;
-}
-
 #welcome-page .welcome-text p {
   font-weight: 500;
   font-size: 2rem;
@@ -277,38 +286,48 @@ table tbody tr td.time {
 /*  About Us page  */
 #about-page {
   align-content: space-between;
+  justify-content: flex-start;
 }
 
 #about-page .about-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
-  width: 50%;
-  flex: 0.5 0.5 50%;
-  padding: 2rem 0;
+  max-width: 50%;
+  max-height: 60%;
+  flex: 3 3 50%;
+}
+
+#about-page .about-text h2 {
+  flex: 1 1 15%;
 }
 
 #about-page .about-text p {
-  padding-bottom: 1rem;
+  flex: 3 3 50%;
+}
+
+#about-page .about-text a {
+  flex: 1 1 15%;
 }
 
 #about-page img {
   object-fit: cover;
-  padding: 3rem 0;
 }
 
 #about-page img#photo1 {
-  flex: 0.5 0.5 30%;
   width: 60%;
-  height: 30%;
+  max-height: 30%;
+  flex: 1 1 30%;
   object-position: 50% 30%;
   order: -1;
+  padding-bottom: 2rem;
 }
 
 #about-page img#photo2 {
   width: 35%;
   height: 100%;
+  flex: 4 4 100%;
 }
 
 /*_______________________________________________*/
@@ -324,6 +343,31 @@ table tbody tr td.time {
   align-items: center;
 }
 
+#motto-page .page-contents {
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#motto-page .page-contents h3 {
+  text-transform: uppercase;
+}
+
+#motto-page .page-contents a {
+  color: var(--color-dark-gray);
+}
+
+#motto-page .page-contents a:hover {
+  background: var(--color-light-violet);
+}
+
+#motto-page .page-contents a .btn {
+  color: var(--color-dark-gray);
+  background: var(--color-main-light);
+}
+
 #motto-page::after {
   content: "";
   position: absolute;
@@ -337,36 +381,84 @@ table tbody tr td.time {
   opacity: 0.7;
 }
 
-#motto-page h3 {
-  text-transform: uppercase;
-}
-
-#motto-page .btn {
-  position: relative;
-  z-index: 10;
+/*_______________________________________________*/
+/*  Schedule page  */
+/*_______________________________________________*/
+/*  Pricing page  */
+#signup-page {
   color: var(--color-dark-gray);
-  background: var(--color-main-light);
-}
-
-#motto-page .btn a {
-  display: block;
+  background-color: var(--color-second-light);
   width: 100%;
-  height: 100%;
-  border: 1px solid red;
+  height: auto;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+#signup-page > h2, #signup-page > p, #signup-page form {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+#signup-page > h2 {
+  flex: 1 1 10%;
+}
+
+#signup-page > p {
+  flex: 1 1 10%;
+}
+
+#signup-page a {
   color: var(--color-dark-gray);
 }
 
-#motto-page .btn a:hover {
-  background: var(--color-light-violet);
+#signup-page form {
+  flex: 5 5 80%;
+  min-height: auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#signup-page form input, #signup-page form select {
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 5px;
+  border: 1px solid var(--color-dark-gray);
+  appearance: none;
+}
+
+#signup-page form input, #signup-page form select, #signup-page form .btn {
+  width: 100%;
+  margin: 5px auto;
+}
+
+#signup-page form .btn {
+  background-color: var(--color-dark-gray);
+  color: var(--color-main-light);
 }
 
 /*_______________________________________________*/
-/*  Schedule page  */
-#schedule-page {
-  padding: 6rem 0 8rem 0;
-  height: auto;
+/*  Footer  */
+footer {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-second-light);
+  background-color: var(--color-dark-gray);
+  font-size: 0.8rem;
 }
 
-#pricing-page {
-  background: black;
+footer a {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+footer a:hover {
+  opacity: 0.7;
 }
