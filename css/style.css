@@ -229,7 +229,7 @@ h2 {
 
 #about-page img {
   object-fit: cover;
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
 
 #about-page img#photo1 {
