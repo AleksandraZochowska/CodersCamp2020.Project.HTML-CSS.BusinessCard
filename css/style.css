@@ -627,6 +627,9 @@ footer.page a:hover {
   .page-contents {
     width: 85%;
   }
+  #photo1 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 630px) {
@@ -641,8 +644,5 @@ footer.page a:hover {
   }
   .contact-options {
     flex-wrap: wrap;
-  }
-  #photo1 {
-    display: none;
   }
 }
