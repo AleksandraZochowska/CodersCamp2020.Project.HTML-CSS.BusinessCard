@@ -642,4 +642,7 @@ footer.page a:hover {
   .contact-options {
     flex-wrap: wrap;
   }
+  #photo1 {
+    display: none;
+  }
 }
