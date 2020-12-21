@@ -9,7 +9,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is a simple one-page layout website, created during [CodersCamp Course](https://coderscamp.edu.pl) in 2020.
+This project is a simple one-page layout website, created during [CodersCamp Course](https://coderscamp.edu.pl) in 2020 with plain HTML & CSS (SCSS).
 
 
 ## Layout Inspiration
