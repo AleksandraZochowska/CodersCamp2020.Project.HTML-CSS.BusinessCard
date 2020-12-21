@@ -620,3 +620,26 @@ footer.page a:hover {
 
 /*_______________________________________________*/
 /*  Media Queries  */
+@media only screen and (max-width: 1200px) {
+  .logo, nav li {
+    padding: 10px;
+  }
+  .page-contents {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .nav-items {
+    flex-direction: column;
+  }
+  #main-navbar {
+    position: absolute;
+  }
+  #motto-page .page-contents {
+    flex-direction: column;
+  }
+  .contact-options {
+    flex-wrap: wrap;
+  }
+}
