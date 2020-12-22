@@ -103,67 +103,6 @@ h4 {
 }
 
 /*_______________________________________________*/
-/*  Tables  */
-
-table {
-    width: 100%;
-    background: var(--color-main-light);
-    color: var(--color-dark-gray);
-    border-collapse: collapse;
-    position: relative;
-
-    thead {
-        border-bottom: 2px solid var(--color-dark-gray);
-
-        th {
-            padding: 10px;
-        }
-    }
-    tbody {
-        tr {
-            td {
-                text-align: center;
-                padding: 10px;
-                border: 1px dotted var(--color-light-gray);
-                
-                &:first-child {
-                    border-left: none;
-                }
-                
-                &:last-child {
-                    border-right: none;
-                }
-                
-                &.workshop {
-                    a {
-                        padding: 10px;
-                        font-size: 1.2rem;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-
-                        transition-property: background-color;
-                        transition-duration: 0.5s;
-                        transition-timing-function: ease-in;
-
-                        &:hover {
-                            border-radius: 5%;
-                            background: rgba(234, 77, 231, 0.158);
-                        }
-                    }
-                }
-
-                &.time {
-                    text-align: center;
-                    opacity: 0.6;
-                }
-            }
-        }
-        
-    }
-}
-
-/*_______________________________________________*/
 /*  Website Container  */
 
 #website-container {
@@ -533,6 +472,57 @@ table {
 
 #schedule-page{
     padding: 5rem 0 7rem;
+
+    .schedule {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .day-schedule {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            h4 {
+                padding: 1rem 0;
+                border-bottom: 1px solid black;
+            }
+            
+            .workshops {
+                display: flex;
+                flex-direction: column;
+                
+                .workshop {
+                    padding: 1rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .workshop-hour {
+                        font-size: 0.95em;;
+                    }
+                    .workshop-name {
+                        font-size: 1.2em;
+                        font-weight: 600;
+                    }
+                    
+                    .workshop-teacher {
+                         
+                    }
+
+                    transition-property: color;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in;
+
+                    &:hover {
+                        color: var(--color-dark-violet);
+                    }
+                }   
+            }
+        }
+    }
 }
 
 /*_______________________________________________*/
@@ -652,9 +642,13 @@ footer.page {
 /*_______________________________________________*/
 /*  Media Queries  */
 
-@media only screen and (max-width: 1200px) {
-    .logo, nav li {
-        padding: 10px;
+@media only screen and (max-width: 1230px) {
+    .logo {
+        padding-left: 1.2rem;
+    } 
+    
+    nav li {
+        padding-right: 1.2rem;
     }
 
     .page-contents {
@@ -662,8 +656,18 @@ footer.page {
     }
 
     #photo1 {
-        display: none;
+        order: 1;
     }
+
+    // #monday, #tuesday, #wednesday {
+    //     flex: 33%;
+    // }
+
+    #thursday, #friday {
+        flex: 50%;
+    }
+
+
 
 }
 

@@ -103,59 +103,6 @@ h4 {
 }
 
 /*_______________________________________________*/
-/*  Tables  */
-table {
-  width: 100%;
-  background: var(--color-main-light);
-  color: var(--color-dark-gray);
-  border-collapse: collapse;
-  position: relative;
-}
-
-table thead {
-  border-bottom: 2px solid var(--color-dark-gray);
-}
-
-table thead th {
-  padding: 10px;
-}
-
-table tbody tr td {
-  text-align: center;
-  padding: 10px;
-  border: 1px dotted var(--color-light-gray);
-}
-
-table tbody tr td:first-child {
-  border-left: none;
-}
-
-table tbody tr td:last-child {
-  border-right: none;
-}
-
-table tbody tr td.workshop a {
-  padding: 10px;
-  font-size: 1.2rem;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
-}
-
-table tbody tr td.workshop a:hover {
-  border-radius: 5%;
-  background: rgba(234, 77, 231, 0.158);
-}
-
-table tbody tr td.time {
-  text-align: center;
-  opacity: 0.6;
-}
-
-/*_______________________________________________*/
 /*  Website Container  */
 #website-container {
   display: flex;
@@ -505,6 +452,53 @@ table tbody tr td.time {
   padding: 5rem 0 7rem;
 }
 
+#schedule-page .schedule {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#schedule-page .schedule .day-schedule {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#schedule-page .schedule .day-schedule h4 {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+#schedule-page .schedule .day-schedule .workshops {
+  display: flex;
+  flex-direction: column;
+}
+
+#schedule-page .schedule .day-schedule .workshops .workshop {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+#schedule-page .schedule .day-schedule .workshops .workshop .workshop-hour {
+  font-size: 0.95em;
+}
+
+#schedule-page .schedule .day-schedule .workshops .workshop .workshop-name {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#schedule-page .schedule .day-schedule .workshops .workshop:hover {
+  color: var(--color-dark-violet);
+}
+
 /*_______________________________________________*/
 /*  Pricing page  */
 #signup-page {
@@ -620,15 +614,21 @@ footer.page a:hover {
 
 /*_______________________________________________*/
 /*  Media Queries  */
-@media only screen and (max-width: 1200px) {
-  .logo, nav li {
-    padding: 10px;
+@media only screen and (max-width: 1230px) {
+  .logo {
+    padding-left: 1.2rem;
+  }
+  nav li {
+    padding-right: 1.2rem;
   }
   .page-contents {
     width: 85%;
   }
   #photo1 {
-    display: none;
+    order: 1;
+  }
+  #thursday, #friday {
+    flex: 50%;
   }
 }
 
