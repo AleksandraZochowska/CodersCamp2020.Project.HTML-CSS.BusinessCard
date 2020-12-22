@@ -2,7 +2,6 @@
 :root {
   --color-main-light: #ffffff;
   --color-second-light: #e6dcdc;
-  --color-light-gray: #545454;
   --color-dark-gray: #333333;
   --color-light-violet: #ea4fe7;
   --color-dark-violet: #bf35bc;
@@ -21,8 +20,6 @@ body {
   background-color: var(--color-main-light);
 }
 
-/*_______________________________________________*/
-/*  Re-usable styles  */
 ul {
   list-style-type: none;
 }
@@ -32,6 +29,8 @@ a {
   color: var(--color-dark-gray);
 }
 
+/*_______________________________________________*/
+/*  Re-usable styles  */
 h1 {
   font-size: 3.3rem;
   line-height: 0.9;
@@ -310,10 +309,10 @@ h4 {
 }
 
 #welcome-page .navbar .socials a:hover {
+  color: transparent;
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  color: transparent;
 }
 
 #welcome-page .navbar .socials a:hover:first-child {
@@ -492,6 +491,10 @@ h4 {
   transition-timing-function: ease-in;
 }
 
+#schedule-page .schedule .day-schedule .workshops .workshop:hover {
+  color: var(--color-dark-violet);
+}
+
 #schedule-page .schedule .day-schedule .workshops .workshop .workshop-hour {
   font-size: 0.95em;
 }
@@ -499,10 +502,6 @@ h4 {
 #schedule-page .schedule .day-schedule .workshops .workshop .workshop-name {
   font-size: 1.2em;
   font-weight: 600;
-}
-
-#schedule-page .schedule .day-schedule .workshops .workshop:hover {
-  color: var(--color-dark-violet);
 }
 
 /*_______________________________________________*/

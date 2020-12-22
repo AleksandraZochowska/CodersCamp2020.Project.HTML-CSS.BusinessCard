@@ -3,7 +3,6 @@
 :root {
     --color-main-light: #ffffff;
     --color-second-light: #e6dcdc;
-    --color-light-gray: #545454;
     --color-dark-gray: #333333;
     --color-light-violet: #ea4fe7;
     --color-dark-violet: #bf35bc;
@@ -22,9 +21,6 @@ body {
     background-color: var(--color-main-light);
 }
 
-/*_______________________________________________*/
-/*  Re-usable styles  */
-
 ul {
     list-style-type: none;
 }
@@ -33,6 +29,9 @@ a {
     text-decoration: none;
     color: var(--color-dark-gray);
 }
+
+/*_______________________________________________*/
+/*  Re-usable styles  */
 
 h1 {
     font-size: 3.3rem;
@@ -166,7 +165,7 @@ h4 {
                 position: absolute;
                 top: -200%;
                 left: -200%;
-              }
+            }
             
             label { 
                 cursor: pointer;
@@ -202,7 +201,6 @@ h4 {
                             transition-property: all;
                             transition-duration: 0.5s;
                             transition-timing-function: ease-out;
-    
                             text-shadow: 0 0 0.3em rgba(191, 53, 189, 0.6);
                             // color: transparent;
                             // background: linear-gradient(var(--color-light-violet), var(--color-main-light)) text;
@@ -211,18 +209,14 @@ h4 {
                                 transition-property: all;
                                 transition-duration: 0.5s;
                                 transition-timing-function: cubic-bezier(0.19, 1, 0.1, 3);
-    
                                 border-color: var(--color-main-light);
                                 transform: translate(0%);
                             }
-                            
-                            
                         }
                     }
                 }
             }
         }
-
     }
 }
 
@@ -272,12 +266,13 @@ h4 {
         &>* {
             position: relative;
             z-index: 200;
-
             animation-duration: 2s;
             animation-timing-function: cubic-bezier(0.2, 1.7, 0.3, 1.05);
+            
             &:first-child {
                 animation-name: slide-in-1;
             }
+            
             &:last-child {
                 animation-name: slide-in-2;
             }
@@ -317,7 +312,6 @@ h4 {
             align-items: center;
             font-size: 1.1rem;
             font-weight: 600;
-
             animation-duration: 1.3s;
             animation-timing-function: cubic-bezier(0.1, 0.3, 0.4, 1);
             animation-name: fade-in;
@@ -328,10 +322,10 @@ h4 {
             }
 
             a:hover {
+                color: transparent;
                 transition-property: all;
                 transition-duration: 0.5s;
                 transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-                color: transparent;
                 
                 &:first-child {
                     // background: linear-gradient(#4652ff, #0c00b4) text;
@@ -357,15 +351,11 @@ h4 {
             a:first-child {
                 margin-top: 15px;
             }
-
             a:last-child {
                 margin-bottom: 15px;
             }
-
         }
     }
-    
-
 }
 
 /*_______________________________________________*/
@@ -513,25 +503,21 @@ h4 {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-
-                    .workshop-hour {
-                        font-size: 0.95em;;
-                    }
-                    .workshop-name {
-                        font-size: 1.2em;
-                        font-weight: 600;
-                    }
-                    
-                    .workshop-teacher {
-                         
-                    }
-
                     transition-property: color;
                     transition-duration: 0.2s;
                     transition-timing-function: ease-in;
 
                     &:hover {
                         color: var(--color-dark-violet);
+                    }
+
+                    .workshop-hour {
+                        font-size: 0.95em;;
+                    }
+
+                    .workshop-name {
+                        font-size: 1.2em;
+                        font-weight: 600;
                     }
                 }   
             }
@@ -579,7 +565,6 @@ h4 {
         align-items: center;
         padding: 10px 0;
 
-        
         input, select{
             font-size: 1.05rem;
             font-family: inherit;
@@ -605,6 +590,7 @@ h4 {
 
 #contact-page {
     padding: 3rem 0 4rem;
+
     i {
         font-size: 3rem;
     }
@@ -644,6 +630,7 @@ footer.page {
     p {
         text-align: center;
     }
+
     a {
         text-transform: uppercase;
         font-weight: 600;
@@ -689,7 +676,6 @@ footer.page {
 }
 
 /*  Screens up to 790px  */
-
 @media only screen and (max-width: 790px) {
 
     #about-page {
@@ -725,10 +711,8 @@ footer.page {
     }
 } 
 
-
 /*  Screens up to 650px  */
-
-    @media only screen and (max-width: 650px) {
+@media only screen and (max-width: 650px) {
 
     #main-navbar {
 
@@ -747,7 +731,6 @@ footer.page {
                 input:checked ~ ul {
                     display: flex;
                     min-width: 100vw;
-                    // height: 100vh;
 
                     &>li {
                         width: 100%;
@@ -763,7 +746,6 @@ footer.page {
                 }
 
                 input:checked ~ label {
-                    
                     &::after {
                         position: absolute;
                         right: 1rem;
@@ -800,6 +782,7 @@ footer.page {
             h1 {
                 font-size: 2.5rem;
             }
+
             p{
                 font-size: 1.5rem;
             }
@@ -831,10 +814,10 @@ footer.page {
             h1 {
                 font-size: 1.8rem;
             }
+            
             p{
                 font-size: 1.2rem;
             }
         }
     }
 }
-
