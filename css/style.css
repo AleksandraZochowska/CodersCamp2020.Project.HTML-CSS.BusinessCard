@@ -208,8 +208,7 @@ table tbody tr td.time {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
-  color: transparent;
-  background: linear-gradient(var(--color-light-violet), var(--color-main-light)) text;
+  text-shadow: 0 0 0.3em rgba(191, 53, 189, 0.6);
 }
 
 #main-navbar .nav-items ul {
@@ -243,8 +242,7 @@ table tbody tr td.time {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-  color: transparent;
-  background: linear-gradient(var(--color-light-violet), var(--color-main-light)) text;
+  text-shadow: 0 0 0.3em rgba(191, 53, 189, 0.6);
 }
 
 #main-navbar .nav-items ul li a:hover::before {
@@ -336,6 +334,8 @@ table tbody tr td.time {
   padding-left: 0.9rem;
   flex-direction: column;
   align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
   animation-duration: 1.3s;
   animation-timing-function: cubic-bezier(0.1, 0.3, 0.4, 1);
   animation-name: fade-in;
@@ -358,15 +358,15 @@ table tbody tr td.time {
 }
 
 #welcome-page .navbar .socials a:hover:first-child {
-  background: linear-gradient(#4652ff, #0c00b4) text;
+  color: #0c00b4;
 }
 
 #welcome-page .navbar .socials a:hover:nth-child(2) {
-  background: linear-gradient(#c76a00, #bd00b0, #680091) text;
+  color: #c70063;
 }
 
 #welcome-page .navbar .socials a:hover:last-child {
-  background: linear-gradient(#c51414, #800000) text;
+  color: #800000;
 }
 
 #welcome-page .navbar .socials::before, #welcome-page .navbar .socials::after {
@@ -633,11 +633,11 @@ footer.page a:hover {
 }
 
 @media only screen and (max-width: 630px) {
-  .nav-items {
-    flex-direction: column;
-  }
   #main-navbar {
     position: absolute;
+  }
+  #main-navbar .nav-items {
+    flex-direction: column;
   }
   #motto-page .page-contents {
     flex-direction: column;
