@@ -5,14 +5,20 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Requirements](#requirements)
+* [Project scope](#project-scope)
 * [Layout inspiration](#layout-inspiration)
 * [Live Preview](#live-preview)
 
 ## General info
 This project is a simple one-page layout website, created during [CodersCamp Course](https://coderscamp.edu.pl) in 2020 with plain HTML & CSS (SCSS).
 
-## Requirements
+## Technologies
+Project is created with:
+* HTML
+* CSS
+* SCSS
+
+## Project scope
 * Box-model
 * Cascading CSS
 * CSS selectors
@@ -25,12 +31,6 @@ This project is a simple one-page layout website, created during [CodersCamp Cou
 * Animations - keyframes
 * Simple contact form
 * Responsive Web Design
-
-## Technologies
-Project is created with:
-* HTML
-* CSS
-* SCSS
 
 ## Layout Inspiration
 Website layout was inspired by [Julia Havryliuk's](https://www.behance.net/chubukina1997) [layout](https://www.behance.net/chubukina1997) on [Behance](https://www.behance.net).
