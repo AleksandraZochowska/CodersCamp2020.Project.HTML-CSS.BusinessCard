@@ -356,53 +356,51 @@ h4 {
 /*  About Us page  */
 
 #about-page {
-    flex-wrap: wrap;
-    align-content: space-evenly;
-    justify-content: space-between;
-    padding: 3rem 0 4rem;
-    height: 100vh;
-    min-height: 40rem;
-    &>* {
-        padding: 1rem;  
-    }
     
-    .about-text {
+    #about-contents {
+        height: 100vh;
+        min-height: auto;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 50%;
-        justify-items: center;
-        flex: 3 3 50%;
-        
+        flex-flow: column wrap;
+
         &>* {
-            padding: 0.4rem 0;  
+            padding: 1rem;  
         }
         
-        h2 {
-            margin-bottom: 0.7rem;
+        .about-text {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 50%;
+            justify-items: center;
+            
+            &>* {
+                padding: 0.4rem 0;  
+            }
+            
+            .btn {
+                margin-top: 1.4rem;
+                align-self: stretch;
+                border: 1px solid var(--color-dark-gray);
+            } 
         }
         
-        .btn {
-            margin-top: 1.4rem;
-            align-self: stretch;
-            border: 1px solid var(--color-dark-gray);
-        } 
-    }
-    
-    img {
-        object-fit: cover;
-        flex: 1 1 50%;
-        
-        &#photo1 {
-            flex: 1 1 50%;
-            width: 50%;
-            max-height: 40%;
-            object-position: 50% 30%;
-            order: -1;
-        }
-        
-        &#photo2 {
-            max-width: 35%;
+        img {
+            object-fit: cover;
+            
+            &#photo1 {
+                width: 50%;
+                height: 40%;
+                object-position: 50% 45%;
+                order: -1;
+            }
+            
+            &#photo2 {
+                max-width: 50%;
+                height: 100%;
+                object-position: 40% 50%;
+            }
         }
     }
 }
@@ -642,6 +640,20 @@ footer.page {
 /*_______________________________________________*/
 /*  Media Queries  */
 
+/*  Screens above 1230px  */
+@media only screen and (min-width: 1230px) {
+    #signup-page {
+        &>h2, &>p, form {
+            width: 615px;
+        }
+    }
+
+    #contact-page .contact-options {
+        width: 738px;
+    }
+}
+    
+/*  Screens up to 1230px  */
 @media only screen and (max-width: 1230px) {
     .logo {
         padding-left: 1.2rem;
@@ -655,25 +667,53 @@ footer.page {
         width: 85%;
     }
 
-    #photo1 {
-        order: 1;
+    .day-schedule {
+        margin: auto 2rem;
     }
-
-    // #monday, #tuesday, #wednesday {
-    //     flex: 33%;
-    // }
-
-    #thursday, #friday {
-        flex: 50%;
-    }
-
-
-
 }
 
-@media only screen and (max-width: 630px) {
+/*  Screens up to 1230px  */
 
-    
+@media only screen and (max-width: 790px) {
+
+    #about-page {
+
+        #about-contents {
+            height: auto;
+            flex-flow: column nowrap;
+
+            .about-text {
+                height: 100%;
+                max-width: 100%;
+            }
+            
+            img {
+                object-fit: cover;
+                opacity: 0.8;
+                
+                &#photo1 {
+                    width: 100%;
+                    max-height: 12em;
+                    object-position: 50% 30%;
+                    order: 0;
+
+                }
+                
+                &#photo2 {
+                    max-width: 100%;
+                    max-height: 12em;
+                    object-position: 50% 45%;
+                }
+            }
+        }
+    }
+} 
+
+
+/*  Screens up to 650px  */
+
+@media only screen and (max-width: 650px) {
+
     #main-navbar {
         position: absolute;
    
@@ -688,11 +728,14 @@ footer.page {
         }
     }
 
+    #signup-page {
+        &>h2, &>p, form {
+            width: 70%;
+        }
+    }
+
     .contact-options {
         flex-wrap: wrap;
     }
-
-    
-
 }
 

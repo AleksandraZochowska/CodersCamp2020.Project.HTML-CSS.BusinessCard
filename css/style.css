@@ -333,57 +333,51 @@ h4 {
 
 /*_______________________________________________*/
 /*  About Us page  */
-#about-page {
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  justify-content: space-between;
-  padding: 3rem 0 4rem;
+#about-page #about-contents {
   height: 100vh;
-  min-height: 40rem;
+  min-height: auto;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-#about-page > * {
+#about-page #about-contents > * {
   padding: 1rem;
 }
 
-#about-page .about-text {
+#about-page #about-contents .about-text {
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   max-width: 50%;
   justify-items: center;
-  flex: 3 3 50%;
 }
 
-#about-page .about-text > * {
+#about-page #about-contents .about-text > * {
   padding: 0.4rem 0;
 }
 
-#about-page .about-text h2 {
-  margin-bottom: 0.7rem;
-}
-
-#about-page .about-text .btn {
+#about-page #about-contents .about-text .btn {
   margin-top: 1.4rem;
   align-self: stretch;
   border: 1px solid var(--color-dark-gray);
 }
 
-#about-page img {
+#about-page #about-contents img {
   object-fit: cover;
-  flex: 1 1 50%;
 }
 
-#about-page img#photo1 {
-  flex: 1 1 50%;
+#about-page #about-contents img#photo1 {
   width: 50%;
-  max-height: 40%;
-  object-position: 50% 30%;
+  height: 40%;
+  object-position: 50% 45%;
   order: -1;
 }
 
-#about-page img#photo2 {
-  max-width: 35%;
+#about-page #about-contents img#photo2 {
+  max-width: 50%;
+  height: 100%;
+  object-position: 40% 50%;
 }
 
 /*_______________________________________________*/
@@ -614,6 +608,17 @@ footer.page a:hover {
 
 /*_______________________________________________*/
 /*  Media Queries  */
+/*  Screens above 1230px  */
+@media only screen and (min-width: 1230px) {
+  #signup-page > h2, #signup-page > p, #signup-page form {
+    width: 615px;
+  }
+  #contact-page .contact-options {
+    width: 738px;
+  }
+}
+
+/*  Screens up to 1230px  */
 @media only screen and (max-width: 1230px) {
   .logo {
     padding-left: 1.2rem;
@@ -624,15 +629,40 @@ footer.page a:hover {
   .page-contents {
     width: 85%;
   }
-  #photo1 {
-    order: 1;
-  }
-  #thursday, #friday {
-    flex: 50%;
+  .day-schedule {
+    margin: auto 2rem;
   }
 }
 
-@media only screen and (max-width: 630px) {
+/*  Screens up to 1230px  */
+@media only screen and (max-width: 790px) {
+  #about-page #about-contents {
+    height: auto;
+    flex-flow: column nowrap;
+  }
+  #about-page #about-contents .about-text {
+    height: 100%;
+    max-width: 100%;
+  }
+  #about-page #about-contents img {
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  #about-page #about-contents img#photo1 {
+    width: 100%;
+    max-height: 12em;
+    object-position: 50% 30%;
+    order: 0;
+  }
+  #about-page #about-contents img#photo2 {
+    max-width: 100%;
+    max-height: 12em;
+    object-position: 50% 45%;
+  }
+}
+
+/*  Screens up to 650px  */
+@media only screen and (max-width: 650px) {
   #main-navbar {
     position: absolute;
   }
@@ -641,6 +671,9 @@ footer.page a:hover {
   }
   #motto-page .page-contents {
     flex-direction: column;
+  }
+  #signup-page > h2, #signup-page > p, #signup-page form {
+    width: 70%;
   }
   .contact-options {
     flex-wrap: wrap;
